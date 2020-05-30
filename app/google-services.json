@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "405024579644",
+    "firebase_url": "https://mypetitefrench-89d81.firebaseio.com",
+    "project_id": "mypetitefrench-89d81",
+    "storage_bucket": "mypetitefrench-89d81.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405024579644:android:fb7584a417f1b401136339",
+        "android_client_info": {
+          "package_name": "com.example.mypetitefrench"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "405024579644-bdttaglvtfo4rpecesalhinsouvg8uf5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhlSezxzpQIutixsfmgPA0KucDjrESud0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "405024579644-bdttaglvtfo4rpecesalhinsouvg8uf5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

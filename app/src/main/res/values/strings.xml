@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyPetiteFrench</string>
+    <string name="facebook_app_id">237001347718900</string>
+    <string name="fb_login_protocol_scheme">fb237001347718900</string>
+    <string name="facebook_application_id" translatable="false">YOUR_APP_ID</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fbYOUR_APP_ID</string>
+    <string name="welcome">Welcome</string>
+    <string name="logout">LogOut</string>
+</resources>
