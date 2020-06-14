@@ -12,7 +12,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 
@@ -36,26 +35,23 @@ public class LoginActivity extends AppCompatActivity {
     private GoogleSignInClient mGoogleSignInClient;
     private FirebaseAuth mAuth;
     private SignInButton signInButton;
-    private Button button1;
-    private EditText username;
-    private EditText password;
     private Button createAccount;
-    private Button logIn;
-
+    private Button buttonlogin;
+    private EditText usernamelogin;
+    private EditText passwordlogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.login);
 
 
-        createAccount = findViewById(R.id.createAcc);
-        logIn = findViewById(R.id.logIn);
+        createAccount = findViewById(R.id.registeraccount);
+        buttonlogin = findViewById(R.id.buttonlogin);
+        usernamelogin = findViewById(R.id.usernamelogin);
+        passwordlogin = findViewById(R.id.passwordlogin);
         signInButton = findViewById(R.id.signInButton);
         signInButton.setSize(SignInButton.SIZE_STANDARD);
-        button1 = findViewById(R.id.button2);
-        username = findViewById(R.id.user);
-        password = findViewById(R.id.password);
 
 
         mAuth = FirebaseAuth.getInstance();
@@ -72,22 +68,12 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-        createAccount.setOnClickListener(new View.OnClickListener() {
+        buttonlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (username.getText().toString().isEmpty() && password.getText().toString().isEmpty()) {
-                    createAccount(username.getText().toString(), password.getText().toString());
-                }
-            }
-        });
-        logIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (username.getText().toString().isEmpty() && password.getText().toString().isEmpty())
-                    signIn(username.getText().toString(), password.getText().toString());
+                if (usernamelogin.getText().toString().isEmpty() || passwordlogin.getText().toString().isEmpty())
+                    Toast.makeText(LoginActivity.this, "Empty", Toast.LENGTH_SHORT).show();
+                else signIn(usernamelogin.getText().toString(), passwordlogin.getText().toString());
             }
         });
         FirebaseUser currentUser = mAuth.getCurrentUser();
@@ -148,27 +134,6 @@ public class LoginActivity extends AppCompatActivity {
         }
     }
 
-    private void createAccount(String email, String password) {
-        mAuth.createUserWithEmailAndPassword(email, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d("Create_Acc", "createUserWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            user.sendEmailVerification();
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            Log.w("Create_Acc", "createUserWithEmail:failure", task.getException());
-                            Toast.makeText(LoginActivity.this, "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
-                        }
-
-                        // ...
-                    }
-                });
-    }
 
     private void signIn(String email, String password) {
 
@@ -195,10 +160,17 @@ public class LoginActivity extends AppCompatActivity {
                         // ...
                     }
                 });
+
     }
 
+    public void clicked(View view) {
 
+
+        startActivity(new Intent(getApplicationContext(), Register.class));
+    }
 }
+
+
 
 
 

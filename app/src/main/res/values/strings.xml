@@ -1,9 +1,27 @@
 <resources>
     <string name="app_name">MyPetiteFrench</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="facebook_app_id">237001347718900</string>
     <string name="fb_login_protocol_scheme">fb237001347718900</string>
     <string name="facebook_application_id" translatable="false">YOUR_APP_ID</string>
     <string name="facebook_login_protocol_scheme" translatable="false">fbYOUR_APP_ID</string>
     <string name="welcome">Welcome</string>
     <string name="logout">LogOut</string>
+    <string name="LogIn">Log In</string>
+    <string name="nav_header_title">Title</string>
+    <string name="nav_header_subtitle">email</string>
+    <string name="nav_header_desc">Header</string>
+    <string name="menu_home">Home</string>
+    <string name="nutrition">Nutrition</string>
+    <string name="tab_Frenchie_Breed">Frenchie Breed</string>
+    <string name="tab_Home">Home</string>
+    <string name="tab_Nutrition">Nutrition</string>
+    <string name="tab_health">Health and Care</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="b1_name">Hip Dysplasia</string>
+    <string name="share">Share</string>
+    <string name="location">Find Vet</string>
 </resources>

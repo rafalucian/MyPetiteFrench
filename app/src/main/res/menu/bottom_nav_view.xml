@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/menu_home" />
+
+    <item
+        android:id="@+id/navigation_nutrition"
+        android:icon="@drawable/nutrition"
+        android:title="@string/tab_Nutrition" />
+
+    <item
+        android:id="@+id/navigation_Frenchie_Breed"
+        android:icon="@drawable/ic_favorite_black_24dp"
+        android:title="@string/tab_Frenchie_Breed" />
+    <item
+        android:id="@+id/navigation_healthcare"
+        android:icon="@drawable/ic_healing_black_24dp"
+        android:title="@string/tab_health" />
+
+</menu>

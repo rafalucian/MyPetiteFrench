@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+    android:id="@+id/navigation_home"
+    android:name="com.example.mypetitefrench.ui.home.HomeFragment"
+    android:label="@string/menu_home"
+    tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_addevent"
+            app:destination="@id/navigation_addevent" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_nutrition"
+        android:name="com.example.mypetitefrench.ui.nutrition.NutritionFragment"
+        android:label="@string/tab_Nutrition"
+        tools:layout="@layout/nutrition_fragment" />
+    <fragment
+        android:id="@+id/navigation_Frenchie_Breed"
+        android:name="com.example.mypetitefrench.ui.frenchiebreed.FrenchieBreed"
+        android:label="@string/tab_Frenchie_Breed"
+        tools:layout="@layout/frenchie_breed_fragment" />
+
+
+
+    <fragment
+        android:id="@+id/navigation_addevent"
+        android:name="com.example.mypetitefrench.ui.home.AddEvent"
+        android:label="Add Event"
+        tools:layout="@layout/addevent_fragment" >
+        <action
+            android:id="@+id/action_navigation_addevent_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/navigation_healthcare"
+        android:name="com.example.mypetitefrench.ui.healthandcare.HealthCare"
+        android:label="@string/tab_health"
+        tools:layout="@layout/health_care_fragment" >
+        <action
+            android:id="@+id/action_navigation_healthcare_to_navigation_disease"
+            app:destination="@id/navigation_disease" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_disease"
+        android:name="com.example.mypetitefrench.ui.healthandcare.DiseaseFragment"
+        android:label="@string/tab_health"
+        tools:layout="@layout/disease_item"
+        >
+        <action
+            android:id="@+id/action_navigation_disease_to_navigation_healthcare"
+            app:destination="@id/navigation_healthcare" />
+    </fragment>
+
+
+</navigation>
